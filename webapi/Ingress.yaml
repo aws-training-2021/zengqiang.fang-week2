@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1beta1
+kind: Ingress
+metadata:
+  name: first-aspnetapi-ingress
+  annotations:
+    kubernetes.io/ingress.class: "nginx"
+spec:
+  tls:
+    - secretName: tls-secret
+  rules:
+    - host: zqmaster.org
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              serviceName: first-aspnetapi-service
+              servicePort: 8080
