@@ -18,6 +18,11 @@
 
 * #### kubectl apply -f ingress.yaml
 
+* #### 使用docker desktop提供的kubernetes环境，需要加装一个ingress controller
+
+    kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v0.46.0/deploy/static/provider/cloud/deploy.yaml
+
+
 * #### input http://zqmaster.org/swagger/index to play with k8s
 
 ### the architecture of this application
